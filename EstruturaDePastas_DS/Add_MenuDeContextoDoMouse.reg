@@ -1,0 +1,7 @@
+Windows Registry Editor Version 5.00
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\RunMyPythonScript]
+@="Criar Projeto DataScience"
+
+[HKEY_CLASSES_ROOT\Directory\Background\shell\RunMyPythonScript\command]
+@="\"C:\\Scripts\\Python311\\python.exe\" \"C:\\Scripts\\EstruturaDePastas_DS\\estrutura_projeto.py\" \"%V\""
