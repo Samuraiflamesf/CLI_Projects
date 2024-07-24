@@ -2,22 +2,18 @@ import os
 import sys
 
 def create_project_structure(project_path, project_name):
+    project_name = "DataScience_" + project_name
     # Criar diretório do projeto
     os.makedirs(project_name)
 
     # Criar subdiretórios
-    os.makedirs(os.path.join(project_name, "0_data", "raw"))
-    os.makedirs(os.path.join(project_name, "0_data", "processed"))
+    os.makedirs(os.path.join(project_name, "1_notebooks", "0_raw"))
+    os.makedirs(os.path.join(project_name, "1_notebooks", "1_clean"))
+    os.makedirs(os.path.join(project_name, "1_notebooks", "2_processed"))
 
-    os.makedirs(os.path.join(project_name, "1_scripts"))
+    os.makedirs(os.path.join(project_name, "2_powerbi", "dashboards"))
 
-    os.makedirs(os.path.join(project_name, "2_notebooks", "exploration"))
-    os.makedirs(os.path.join(project_name, "2_notebooks", "analysis"))
-
-    os.makedirs(os.path.join(project_name, "3_powerbi", "dashboards"))
-    os.makedirs(os.path.join(project_name, "3_powerbi", "datasets"))
-
-    os.makedirs(os.path.join(project_name, "4_docs"))
+    os.makedirs(os.path.join(project_name, "3_docs"))
 
     # Criar README.md
     readme_content = f"""<div align='center'>
@@ -49,21 +45,15 @@ def create_project_structure(project_path, project_name):
 ```
 {project_name}/
 │
-├── 0_data/          # Dados brutos e processados
-│   ├── raw/         # Dados brutos, diretamente das fontes
-│   └── processed/   # Dados processados e limpos
+├── 1_notebooks/       # Dados brutos e processados
+│   ├── 0_raw/         # Dados brutos, diretamente das fontes
+│   ├── 1_clean/       # Dados processados e limpos
+│   └── 2_processed/   # Notebooks para análises específicas
 │
-├── 1_scripts/       # Scripts úteis
+├── 2_powerbi/       # Arquivos relacionados ao Power BI
+│   └── dashboards/  # Dashboards criados no Power BI
 │
-├── 2_notebooks/     # Jupyter Notebooks
-│   ├── exploration/ # Notebooks para exploração inicial dos dados
-│   └── analysis/    # Notebooks para análises específicas
-│
-├── 3_powerbi/       # Arquivos relacionados ao Power BI
-│   ├── dashboards/  # Dashboards criados no Power BI
-│   └── datasets/    # Conjuntos de dados usados no Power BI
-│
-└── 4_docs/          # Documentos de referência, artigos, etc.
+└── 3_docs/          # Documentos de referência, artigos, etc.
 ```
 ## 🤝 Referencias e Links Complementares
 - [exemplo](https://exemplo.com/)"""
